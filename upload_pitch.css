@@ -31,11 +31,16 @@ label{
 }
 
 input,textarea,select{
-    color:black;
-    border-width: 2px;
+    display: block;
     width: 100%;
-    margin: 10px 0 0;
-    min-height: 2em;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    border: 1px solid #dddddd;
+    outline: none;
+    background-color: #eeeeee;
+    transition: background 0.2s, border-color 0.2s;
+    font: 500 1rem 'Quicksand', sans-serif;
 }
 
 select{
