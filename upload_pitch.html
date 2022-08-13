@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Upload Pitch</title>
+        <script type="text/javascript">
+        function CheckColors(val){
+            var element=document.getElementById('cat_oth');
+            if(val=="o")
+                element.style.display='block';
+            else
+                element.style.display='none';
+            }
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Upload your Pitch</h1>
+            <h3><em> Move one step closer to making your idea come true..</em></h3>
+            <link href="style_up.css" rel="stylesheet">
+        </header>
+        <main>
+            <form>
+                <label id="name">Name: 
+                    <input type="text" placeholder="Enter name of product/idea" size="50" required>
+                </label>
+                <label id="target">Target Audience:
+                    <input type="text" placeholder="Who is this going to help?" size="50" required>
+                </label>
+                <label id="abstract">Abstract:
+                    <textarea rows="5" cols="50" required placeholder="Describe the idea/product in 150-200 words..." ></textarea>
+                </label>
+                <label id="budget">Budget: 
+                    <input type="number" placeholder="Enter estimated budget" size="50" required> 
+                </label>
+                <label id="cat">Category:
+                    <select name="category" onchange='CheckColors(this.value);'>
+                        <option value="">Select catgory</option>
+                        <option value="e">Enterprise</option>
+                        <option value="h">Health</option>
+                        <option value="ed">Education</option>
+                        <option value="f">Financial</option>
+                        <option value="r">Retail</option>
+                        <option value="r">Consumer</option>
+                        <option value="hr">HR</option>
+                        <option value="m">Media/Entertainment</option>
+                        <option value="a">Advertising/Marketing</option>
+                        <option value="o">Others</option>
+                    </select>
+                <input type="text" name="cat_oth" id="cat_oth" size="50" style="display:none;"/>
+                </label>
+                <label id="prop">Upload your proposal (word documents): 
+                    <input type="file" accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
+                </label>
+                <label id="img">Attach images (if any):
+                    <input type="file" accept="image/*">
+                </label>
+                <input type="submit" value="Submit" id="Submit">
+            </form>
+        </main>
+    </body>
+
+</html>
