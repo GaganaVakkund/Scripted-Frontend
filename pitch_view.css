@@ -3,6 +3,7 @@ body{
     background-size: cover;
     width: 100%;
     height: 100em;
+    justify-content: center;
 }
 
 main{
